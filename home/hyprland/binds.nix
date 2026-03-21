@@ -2,15 +2,21 @@
 
 {
   wayland.windowManager.hyprland.settings = {
+    "$terminal" = "kitty";
+    "$fileManager" = "dolphin";
+    "$menu" = "hyprlauncher";
+
     # Bind keyboard keysi
     "$mainMod" = "SUPER";
+    "$mainMod_L" = "SUPER_L";
+
     bind = [
 	"$mainMod, Q, exec, $terminal"
 	"$mainMod, C, killactive"
 	"$mainMod, M, exit"
 	"$mainMod, E, exec, $fileManager"
 	"$mainMod, V, togglefloating"
-	"$mainMod, R, exec, $menu"
+	"$mainMod, $mainMod_L, exec, $menu"
 	"$mainMod, P, pseudo" # dwindle
 	"$mainMod, J, togglesplit" # dwindle
 
