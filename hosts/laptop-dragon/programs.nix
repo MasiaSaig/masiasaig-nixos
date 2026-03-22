@@ -53,10 +53,15 @@
     #wget
     git
     kitty
-    hyprlauncher
-    hyprpaper
     vscode
     discord
+    
+    # App launcher
+    hyprlauncher
+    # Wallpaper
+    hyprpaper
+    # color picker
+    hyprpicker
     
     # Needed for dolphin's svg icons support
     kdePackages.qtsvg
