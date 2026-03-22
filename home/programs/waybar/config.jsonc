@@ -18,8 +18,9 @@
   ],
   "modules-left": [
     //"custom/exit",
+    "clock",
     "custom/appmenu",
-    "group/quicklinks",
+    //"group/quicklinks",
     "tray",
     "hyprland/window"
   ],
@@ -32,7 +33,6 @@
     //"battery",
     "group/media",
     "group/hardware",
-    "clock",
     "custom/notification"
   ]
 }
