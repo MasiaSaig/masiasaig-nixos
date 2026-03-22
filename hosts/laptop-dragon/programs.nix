@@ -67,6 +67,9 @@
     grim
     slurp
     wl-clipboard
+
+    # Brightness change
+    brightnessctl
   ];
 
   environment.sessionVariables = {
