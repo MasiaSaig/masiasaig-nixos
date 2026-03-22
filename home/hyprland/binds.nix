@@ -11,8 +11,8 @@
     "$mainMod_L" = "SUPER_L";
 
     bind = [
-	"$mainMod, Q, exec, $terminal"
-	"$mainMod, C, killactive"
+	"$mainMod, T, exec, $terminal"
+	"$mainMod, Q, killactive"
 	"$mainMod, M, exit"
 	"$mainMod, E, exec, $fileManager"
 	"$mainMod, V, togglefloating"
