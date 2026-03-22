@@ -41,6 +41,10 @@
     firefox = {
       enable = true;
     };
+
+    thunderbird = {
+      enable = true;
+    };
   };
 
   # List pakages installed in system profile. Search with:
@@ -53,6 +57,7 @@
     hyprpaper
     vscode
     discord
+    
     # needed for dolphin's svg icons support
     kdePackages.qtsvg
     kdePackages.dolphin
