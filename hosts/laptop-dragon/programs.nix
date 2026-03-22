@@ -52,6 +52,7 @@
     hyprlauncher
     hyprpaper
     vscode
+    discord
   ];
 
   environment.sessionVariables = {
