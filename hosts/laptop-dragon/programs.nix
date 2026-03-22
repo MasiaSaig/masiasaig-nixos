@@ -53,6 +53,9 @@
     hyprpaper
     vscode
     discord
+    # needed for dolphin's svg icons support
+    kdePackages.qtsvg
+    kdePackages.dolphin
   ];
 
   environment.sessionVariables = {
