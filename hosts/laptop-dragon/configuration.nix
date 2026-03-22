@@ -14,6 +14,7 @@
       ./programs.nix
       ./greeter.nix
       ./nvidia.nix
+      ./fonts.nix
     ];
 
   /*boot.loader.systemd-boot.enable = true;

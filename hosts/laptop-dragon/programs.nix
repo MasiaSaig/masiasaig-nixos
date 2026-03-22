@@ -27,6 +27,10 @@
       xwayland.enable = true;
     };
 
+    waybar = {
+      enable = true;
+    };
+
     neovim = {
       enable = true;
       defaultEditor = true;
@@ -46,6 +50,7 @@
     git
     kitty
     hyprlauncher
+    hyprpaper
     vscode
   ];
 
