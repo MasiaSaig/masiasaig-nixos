@@ -8,5 +8,6 @@
     noto-fonts-color-emoji
     #nerdfonts
     font-awesome
+    #inter
   ];
 }
