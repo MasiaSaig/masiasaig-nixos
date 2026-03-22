@@ -54,9 +54,10 @@
       };
 
       # Auto-start 
-      /*exec-once = [
-        "waybar"
-      ];*/
+      exec-once = [
+        #"waybar"
+	"hyprpaper"
+      ];
     };
   };
 }

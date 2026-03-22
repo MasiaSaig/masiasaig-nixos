@@ -16,6 +16,7 @@
     ./programs/vscode.nix
     ./programs/waybar/default.nix
     ./programs/bash.nix
+    ./programs/hyprpaper.nix
   ];
 
   # Home Manager's information of user.

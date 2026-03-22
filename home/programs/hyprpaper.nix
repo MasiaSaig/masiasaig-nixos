@@ -11,7 +11,7 @@
         # By display
         #"DP-2,~/wallpapers/wallpaper2.jpg"
         # By default/fallback
-        ",~/Pictures/wallpapers/0.webp"
+        ", ~/Pictures/wallpapers/0.webp"
       ];
     };
   };
