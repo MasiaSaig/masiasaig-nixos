@@ -9,5 +9,6 @@
     #nerdfonts
     font-awesome
     #inter
+    nerd-fonts.ubuntu
   ];
 }
