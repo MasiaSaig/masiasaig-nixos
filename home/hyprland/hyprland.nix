@@ -52,6 +52,11 @@
         no_donation_nag = true;
 	no_update_news = false;
       };
+
+      # Auto-start 
+      /*exec-once = [
+        "waybar"
+      ];*/
     };
   };
 }
