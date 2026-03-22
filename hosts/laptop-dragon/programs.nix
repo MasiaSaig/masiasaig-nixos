@@ -58,9 +58,15 @@
     vscode
     discord
     
-    # needed for dolphin's svg icons support
+    # Needed for dolphin's svg icons support
     kdePackages.qtsvg
     kdePackages.dolphin
+
+    # Screen-shot
+    hyprshot
+    grim
+    slurp
+    wl-clipboard
   ];
 
   environment.sessionVariables = {

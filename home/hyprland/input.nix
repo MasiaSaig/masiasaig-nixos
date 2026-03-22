@@ -4,11 +4,11 @@
   wayland.windowManager.hyprland.settings = {
     input = 
     {
-      kb_layout = "us,pl";
+      kb_layout = "pl";
       kb_variant = "";
       kb_options = [
         "grp:alt_shift_toggle"
-	"compose:ralt"
+	"compose:rctrl"
       ];
       repeat_delay = 300;
       follow_mouse = 1;
