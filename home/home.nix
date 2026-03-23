@@ -10,7 +10,7 @@
 
   # Imports modules, which can/should be able to switch ON/OFF
   imports = [ 
-    ./hyprland/hyprland.nix
+    ./hyprland/default.nix
     ./programs/git.nix
     ./programs/neovim.nix
     ./programs/vscode.nix

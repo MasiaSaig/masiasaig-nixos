@@ -20,7 +20,10 @@
     systemd.enable = false;
 
     settings = {
-      monitor = ",preferred,auto,auto";
+      monitor = [
+        "eDP-1, preferred, auto, 1"
+        "HDMI-A-1, preferred, auto-up, 1"
+      ];
       
       general = {
         gaps_in = 2;
