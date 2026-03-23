@@ -53,6 +53,7 @@
     #wget
     git
     kitty
+    htop
     vscode
     discord
     
