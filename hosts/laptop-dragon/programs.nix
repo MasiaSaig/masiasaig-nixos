@@ -76,6 +76,9 @@
 
     # Brightness change
     brightnessctl
+
+    # Notification daemon (swaync)
+    swaynotificationcenter
   ];
 
   environment.sessionVariables = {
