@@ -14,6 +14,7 @@
       ./programs.nix
       ./greeter.nix
       ./nvidia.nix
+      ./tlp.nix
       ./fonts.nix
     ];
 
