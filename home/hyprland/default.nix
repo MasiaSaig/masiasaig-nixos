@@ -58,7 +58,7 @@
 
       # Auto-start 
       exec-once = [
-        #"waybar"
+        "killall waybar & sleep 2 & waybar"
 	"hyprpaper"
       ];
     };
