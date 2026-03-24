@@ -51,6 +51,6 @@
 
   "group/hardware": {
     "orientation": "horizontal",
-    "modules": ["cpu", "custom/gpu", "memory", "disc", "temperature", "battery"]
+    "modules": ["cpu", "custom/gpu", "memory", "disk", "temperature", "battery"]
   }
 }

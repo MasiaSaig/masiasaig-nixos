@@ -19,7 +19,7 @@
   "modules-left": [
     //"custom/exit",
     "clock",
-    "custom/appmenu",
+    //"custom/appmenu",
     //"group/quicklinks",
     "tray",
     "hyprland/window"
