@@ -2,7 +2,7 @@
 
 {
   programs.waybar = {
-    #enable = true;
+    enable = true;
   };
 
   xdg.configFile."waybar/config.jsonc".source = ./config.jsonc;
