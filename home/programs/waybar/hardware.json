@@ -2,14 +2,14 @@
   "cpu": {
     "format": " {usage}%",
     "on-click": "kitty -e htop",
-    "interval": 5
+    "interval": 10
   },
 
   // Nvidia GPU
   "custom/gpu": {
     "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
-    "format": "󰾲{}%",
-    "interval": 5
+    "format": "󰾲{}% ",
+    "interval": 10
   },
 
   "memory": {
