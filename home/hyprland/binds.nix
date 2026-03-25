@@ -5,6 +5,8 @@
     "$terminal" = "kitty";
     "$fileManager" = "dolphin";
     "$menu" = "hyprlauncher";
+    "$screenShot" = "hyprshot";
+    "$colorPicker" = "hyprpicker";
 
     # Bind keyboard keysi
     "$mainMod" = "SUPER";
@@ -16,14 +18,14 @@
 	"$mainMod, M, exit"
 	"$mainMod, E, exec, $fileManager"
 	"$mainMod, V, togglefloating"
-	"$mainMod, $mainMod_L, exec, $menu"
+	"$mainMod, R, exec, $menu"
 	"$mainMod, P, pseudo" # dwindle
 	"$mainMod, J, togglesplit" # dwindle
 	# Screen shot
-    "$mainMod SHIFT, S, exec, hyprshot -m region --clipboard-only"
-	", Print_L, exec, hyprshot -m output"
+        "$mainMod SHIFT, S, exec, $screenShot -m region --clipboard-only"
+	", Print_L, exec, $screenShot -m output"
 	# Color picker
-    "$mainMod SHIFT, C, exec, hyprpicker -a -l"
+        "$mainMod SHIFT, C, exec, $colorPicker -a -l"
 
 	# Move focus with mainMod + arrow keys
 	"$mainMod, left, movefocus, l"
