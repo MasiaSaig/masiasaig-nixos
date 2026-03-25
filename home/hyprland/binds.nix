@@ -20,7 +20,7 @@
 	"$mainMod, P, pseudo" # dwindle
 	"$mainMod, J, togglesplit" # dwindle
 	# Screen shot
-    "$mainMod SHIFT, S, exec, hyprshot -m region"
+    "$mainMod SHIFT, S, exec, hyprshot -m region --clipboard-only"
 	", Print_L, exec, hyprshot -m output"
 	# Color picker
     "$mainMod SHIFT, C, exec, hyprpicker -a -l"
