@@ -17,6 +17,7 @@
     ./programs/waybar/default.nix
     ./programs/bash.nix
     ./programs/hyprpaper.nix
+    ./programs/hyprshot.nix
   ];
 
   # Home Manager's information of user.
