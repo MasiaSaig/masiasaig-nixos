@@ -16,6 +16,7 @@
       ./nvidia.nix
       ./tlp.nix
       ./fonts.nix
+      ./pipewire.nix
     ];
 
   /*boot.loader.systemd-boot.enable = true;
