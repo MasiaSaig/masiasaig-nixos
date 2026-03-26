@@ -24,6 +24,8 @@
   home.username = "masiasaig";
   home.homeDirectory = "/home/masiasaig";
 
+  nixpkgs.config.allowUnfree = true;
+
   #########################################################################
 
   # This value determines the Home Manager release that your configuration is

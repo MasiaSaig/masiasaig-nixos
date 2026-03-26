@@ -1,10 +1,13 @@
 { pkgs, ... }:
 
 {
-  /*programs.vscode = {
+  programs.vscode = {
     enable = true;
     profiles.default.extensions = with pkgs.vscode-extensions; [
-      # extensions
+      vue.volar
+      eamodio.gitlens
+      github.copilot
+      github.copilot-chat
     ];
-  };*/
+  };
 }

@@ -34,13 +34,9 @@
       vimAlias = true;
     };
 
-    firefox = {
-      enable = true;
-    };
-
-    thunderbird = {
-      enable = true;
-    };
+    firefox.enable = true;
+    thunderbird.enable = true;
+    #vscode.enable = true;
   };
 
   # List pakages installed in system profile. Search with:
@@ -50,8 +46,16 @@
     git
     kitty
     htop
-    vscode
     discord
+    
+    # Visual Studio Code
+    #vscode
+    /*(vscode-with-extensions.override {
+      vscodeExtensions = with vscode-extensions; [
+        vue.volar
+	eamodio.gitlens
+      ];
+    })*/
     
     # App launcher
     hyprlauncher
