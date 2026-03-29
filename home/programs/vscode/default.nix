@@ -11,14 +11,33 @@
         github.copilot                      # Github Copilot
         github.copilot-chat
         bmewburn.vscode-intelephense-client # PHP-intelisense
+        # Custom CSS and JS loader
         */
       ];
 
-      /*userSettings = {
-        # General editor settings
-        "editor.fontFamily" = "'Fira Code'";
-        "editor.fontSize" = 14;
-      }*/
+      userSettings = {
+
+        # Sets different font for comments
+        "vscode_custom_css.imports" = [
+          "file:///home/masiasaig/.vscode/vs-code-styles.css"
+        ];
+        "vscode_custom_css.policy" = true;
+        "editor.tokenColorCustomizations" = {
+          "textMateRules" = [
+            {
+              "scope" = "comment";
+              "settings" = {
+                "fontStyle" = "italic";
+              };
+            }
+          ];
+        };
+      };
     };
   };
+
+  # File with custom CSS
+  # Sets different font for comments
+  # Need to install "Custom CSS and JS loader" extension
+  home.file.".vscode/vs-code-styles.css".source = ./vs-code-style.css;
 }
