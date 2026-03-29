@@ -5,10 +5,13 @@
     enable = true;
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
-        vue.volar
-        eamodio.gitlens
-        github.copilot
+        /*
+        vue.volar                           # Vue intelisense
+        eamodio.gitlens                     # Git-lens
+        github.copilot                      # Github Copilot
         github.copilot-chat
+        bmewburn.vscode-intelephense-client # PHP-intelisense
+        */
       ];
 
       /*userSettings = {

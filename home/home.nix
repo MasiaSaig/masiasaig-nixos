@@ -17,10 +17,11 @@
     ./programs/hyprlauncher/default.nix
     ./programs/hyprpicker/default.nix
 
+    ./programs/vscode/default.nix
+
     ./programs/kitty.nix
     ./programs/git.nix
     ./programs/neovim.nix
-    ./programs/vscode.nix
     
     ./programs/hyprpaper.nix
     ./programs/hyprshot.nix
