@@ -1,18 +1,18 @@
 {
   # Requires: git, flakes, home manager
 
-  description = "Initial flake combining everything together";
+  description = "Initial flake combining whole OS together with home-manager and programs";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.11";
+    #nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
-      # 'follows' for inheriting/following home-manager's (25.11) nixpkgs
       inputs.nixpkgs.follows = "nixpkgs";
+      /*url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";*/
     };
-
-    #hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }:
@@ -20,9 +20,6 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-
-#    packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
-#    packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
 
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       inherit system;

@@ -1,5 +1,7 @@
 { ... }:
 
+# Wallpaper 'manager'
+
 {
   services.hyprpaper = {
     enable = true;

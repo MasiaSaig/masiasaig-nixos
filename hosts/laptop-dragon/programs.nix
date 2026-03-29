@@ -10,17 +10,18 @@
         init.defaultBranch = "main";
         user = {
           name = "Masia Saig";
-	  email = "mullermaciej12@gmail.com";
+          email = "mullermaciej12@gmail.com";
         };
       };
-      #config.pull.rebase = true;
     };
 
     hyprland = {
       enable = true;
       # Set flake package and portal package to be in sync
-      /*package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-      portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;*/
+      /*
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+      */
       # Enable UWSM (recommended)
       withUWSM = true;
       # Compatibility layer allows X11 application to run on Wayland compositor, ensures legacy apps to function in modern Wayland environment.
@@ -36,7 +37,6 @@
 
     firefox.enable = true;
     thunderbird.enable = true;
-    #vscode.enable = true;
   };
 
   # List pakages installed in system profile. Search with:
@@ -44,25 +44,11 @@
   environment.systemPackages = with pkgs; [
     #wget
     git
-    kitty
     htop
     discord
     
-    # Visual Studio Code
-    #vscode
-    /*(vscode-with-extensions.override {
-      vscodeExtensions = with vscode-extensions; [
-        vue.volar
-	eamodio.gitlens
-      ];
-    })*/
-    
-    # App launcher
-    hyprlauncher
-    # Wallpaper
-    hyprpaper
-    # color picker
-    hyprpicker
+    # Screen locker
+    hyprlock
     
     # Needed for dolphin's svg icons support
     kdePackages.qtsvg
@@ -79,6 +65,8 @@
 
     # Notification daemon (swaync)
     swaynotificationcenter
+
+    #claude-code
   ];
 
   environment.sessionVariables = {
@@ -86,5 +74,15 @@
     NIXOS_OZONE_WL = "1";
     # For firefox on Wayland
     MOZ_ENABLE_WAYLAND = "1";
+
+    /*
+    ANTHROPIC_API_KEY     = "$(cat /home/masiasaig/.secrets/gemini-api-key)";
+    ANTHROPIC_BASE_URL   = "https://generativelanguage.googleapis.com/v1beta/openai/";
+    ANTHROPIC_MODEL      = "gemini-2.5-flash";
+    #ANTHROPIC_BASE_URL    = "https://openrouter.ai/api";
+    #ANTHROPIC_MODEL       = "openai/o4-mini";
+                            #"qwen/qwen3-coder:free";
+    ANTHROPIC_AUTH_TOKEN  = "dummy";
+    */
   };
 }

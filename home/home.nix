@@ -11,13 +11,22 @@
   # Imports modules, which can/should be able to switch ON/OFF
   imports = [ 
     ./hyprland/default.nix
+    
+    ./programs/waybar/default.nix
+    ./programs/hypridle/default.nix
+    ./programs/hyprlauncher/default.nix
+    ./programs/hyprpicker/default.nix
+
+    ./programs/kitty.nix
     ./programs/git.nix
     ./programs/neovim.nix
     ./programs/vscode.nix
-    ./programs/waybar/default.nix
-    ./programs/bash.nix
+    
     ./programs/hyprpaper.nix
     ./programs/hyprshot.nix
+
+    #./programs/claude-code.nix
+    #./programs/bash.nix
   ];
 
   # Home Manager's information of user.

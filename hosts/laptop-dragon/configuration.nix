@@ -11,17 +11,13 @@
       # results in: (import ./hardware-configuration.nix {inherit config pkgs;})
       ./hardware-configuration.nix
       ./boot.nix
-      ./programs.nix
-      ./greeter.nix
       ./nvidia.nix
-      ./tlp.nix
-      ./fonts.nix
       ./pipewire.nix
+      ./fonts.nix
+      ./programs.nix
+      ./tlp.nix
+      ./greeter.nix
     ];
-
-  /*boot.loader.systemd-boot.enable = true;
-  boot.loader.systemd-boot.editor = true;
-  boot.loader.efi.canTouchEfiVariables = true;*/
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
