@@ -22,10 +22,10 @@
 	"$mainMod, P, pseudo" # dwindle
 	"$mainMod, J, togglesplit" # dwindle
 	# Screen shot
-        "$mainMod SHIFT, S, exec, $screenShot -m region --clipboard-only"
+    "$mainMod SHIFT, S, exec, $screenShot -m region -z --clipboard-only"
 	", Print_L, exec, $screenShot -m output"
 	# Color picker
-        "$mainMod SHIFT, C, exec, $colorPicker -a -l"
+    "$mainMod SHIFT, C, exec, $colorPicker -a -l"
 
 	# Move focus with mainMod + arrow keys
 	"$mainMod, left, movefocus, l"
