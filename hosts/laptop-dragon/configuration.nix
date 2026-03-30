@@ -53,11 +53,15 @@
     variant = "";
   };
 
+  virtualisation.docker = {
+    enable = true;
+  }
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.masiasaig = {
     isNormalUser = true;
     description = "Masia Saig";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [];
   };
 
