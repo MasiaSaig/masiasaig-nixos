@@ -11,16 +11,14 @@
   "reload_style_on_change": true,
   "include": [
     "~/.config/waybar/modules.json",
-    "~/.config/waybar/quicklinks.json",
     "~/.config/waybar/hardware.json",
     "~/.config/waybar/media.json",
     "~/.config/waybar/media.json"
   ],
   "modules-left": [
-    //"custom/exit",
+    "custom/exit",
     "clock",
     //"custom/appmenu",
-    //"group/quicklinks",
     "tray",
     "hyprland/window"
   ],
