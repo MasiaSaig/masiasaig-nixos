@@ -13,19 +13,18 @@
     ./hyprland/default.nix
     
     ./programs/waybar/default.nix
+    ./programs/wlogout/default.nix
     ./programs/hypridle/default.nix
     ./programs/hyprlauncher/default.nix
     ./programs/hyprpicker/default.nix
-    ./programs/wlogout/default.nix
-
     ./programs/vscode/default.nix
 
+    ./programs/hyprpaper.nix
+    ./programs/hyprshot.nix
     ./programs/kitty.nix
     ./programs/git.nix
     ./programs/neovim.nix
-    
-    ./programs/hyprpaper.nix
-    ./programs/hyprshot.nix
+    ./programs/pavucontrol.nix
 
     #./programs/claude-code.nix
     #./programs/bash.nix
