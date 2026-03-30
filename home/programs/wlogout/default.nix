@@ -3,5 +3,5 @@
 {
   programs.wlogout = {
      enable = true;
-  }
+  };
 }
