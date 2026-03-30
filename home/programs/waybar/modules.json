@@ -38,12 +38,12 @@
   //},
 
   // Power Menu
-  //"custom/exit": {
-  //  "format": "",
-  //  "tooltip-format": "Powermenu",
-  //  "on-click": "wlogout -b 4",
-  //  "tooltip": false
-  //},
+  "custom/exit": {
+   "format": "",
+   "tooltip-format": "Powermenu",
+   "on-click": "wlogout -b 4",
+   "tooltip": false
+  },
 
   "custom/notification": {
     "tooltip": false,

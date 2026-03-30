@@ -16,6 +16,7 @@
     ./programs/hypridle/default.nix
     ./programs/hyprlauncher/default.nix
     ./programs/hyprpicker/default.nix
+    ./programs/wlogout/default.nix
 
     ./programs/vscode/default.nix
 
