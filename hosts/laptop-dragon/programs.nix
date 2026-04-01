@@ -8,10 +8,6 @@
       config.core.editor = "nvim";
       config = {
         init.defaultBranch = "main";
-        user = {
-          name = "Masia Saig";
-          email = "mullermaciej12@gmail.com";
-        };
       };
     };
 
@@ -70,19 +66,9 @@
   ];
 
   environment.sessionVariables = {
-    # Make Electron apps use Wayland
+    # Hint Electron apps use Wayland
     NIXOS_OZONE_WL = "1";
     # For firefox on Wayland
     MOZ_ENABLE_WAYLAND = "1";
-
-    /*
-    ANTHROPIC_API_KEY     = "$(cat /home/masiasaig/.secrets/gemini-api-key)";
-    ANTHROPIC_BASE_URL   = "https://generativelanguage.googleapis.com/v1beta/openai/";
-    ANTHROPIC_MODEL      = "gemini-2.5-flash";
-    #ANTHROPIC_BASE_URL    = "https://openrouter.ai/api";
-    #ANTHROPIC_MODEL       = "openai/o4-mini";
-                            #"qwen/qwen3-coder:free";
-    ANTHROPIC_AUTH_TOKEN  = "dummy";
-    */
   };
 }
