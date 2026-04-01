@@ -53,10 +53,11 @@
     variant = "";
   };
 
-  virtualisation.docker = {
-    enable = true;
-  };
-
+  environment.systemPackages = with pkgs; [
+    docker-compose
+  ];
+  virtualisation.docker.enable = true;
+  virtualisation.podman.enable = true;
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.masiasaig = {
     isNormalUser = true;
