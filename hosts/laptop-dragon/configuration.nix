@@ -17,6 +17,11 @@
       ./programs.nix
       ./tlp.nix
       ./greeter.nix
+
+      ./programs/firefox.nix
+      ./programs/thunderbird.nix
+      ./programs/git.nix
+      ./programs/neovim.nix
     ];
 
   networking.hostName = "nixos"; # Define your hostname.

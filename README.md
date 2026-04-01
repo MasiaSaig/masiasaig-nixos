@@ -2,4 +2,4 @@
 Will probably be working on it, till I get bored or stop using it.
 
 ### TODO:
-- move firefox and others to home-manager
+- make stuff look better...
