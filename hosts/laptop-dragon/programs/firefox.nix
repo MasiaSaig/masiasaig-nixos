@@ -7,6 +7,6 @@
       DisableTelemetry = true;
       DisableFirefoxStudies = true;
       DontCheckDefaultBrowser = true;
-    }
-  }
+    };
+  };
 }

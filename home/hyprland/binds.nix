@@ -5,7 +5,8 @@
     "$terminal" = "kitty";
     "$fileManager" = "dolphin";
     "$menu" = "hyprlauncher";
-    "$screenShot" = "hyprshot";
+    # For some reason, hyprshot does not freeze screen when using variable
+    #"$screenShot" = "hyprshot";
     "$colorPicker" = "hyprpicker";
 
     # Bind keyboard keysi
@@ -22,10 +23,10 @@
 	"$mainMod, P, pseudo" # dwindle
 	"$mainMod, J, togglesplit" # dwindle
 	# Screen shot
-    "$mainMod SHIFT, S, exec, $screenShot -m region -z --clipboard-only"
-	", Print_L, exec, $screenShot -m output"
+        "$mainMod SHIFT, S, exec, hyprshot -m region -z --clipboard-only"
+	", Print_L, exec, hyprshot -m output"
 	# Color picker
-    "$mainMod SHIFT, C, exec, $colorPicker -a -l"
+        "$mainMod SHIFT, C, exec, $colorPicker -a -l"
 
 	# Move focus with mainMod + arrow keys
 	"$mainMod, left, movefocus, l"

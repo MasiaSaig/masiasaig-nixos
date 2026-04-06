@@ -3,5 +3,5 @@
 {
   programs.thunderbird = {
     enable = true;
-  }
+  };
 }
