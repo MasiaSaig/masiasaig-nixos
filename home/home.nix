@@ -19,6 +19,7 @@
     ./programs/hyprpicker/default.nix
     ./programs/vscode/default.nix
 
+    ./programs/discord.nix
     ./programs/hyprpaper.nix
     ./programs/hyprshot.nix
     ./programs/kitty.nix

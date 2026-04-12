@@ -18,10 +18,11 @@
   # List pakages installed in system profile. Search with:
   # >> nux search wget
   environment.systemPackages = with pkgs; [
+    # Tools
+    unzip
     #wget
     git
     htop
-    discord
     
     # Screen locker
     hyprlock
