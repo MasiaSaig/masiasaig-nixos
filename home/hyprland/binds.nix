@@ -23,16 +23,22 @@
 	"$mainMod, P, pseudo" # dwindle
 	"$mainMod, J, togglesplit" # dwindle
 	# Screen shot
-        "$mainMod SHIFT, S, exec, hyprshot -m region -z --clipboard-only"
+    "$mainMod SHIFT, S, exec, hyprshot -m region -z --clipboard-only"
 	", Print_L, exec, hyprshot -m output"
 	# Color picker
-        "$mainMod SHIFT, C, exec, $colorPicker -a -l"
+    "$mainMod SHIFT, C, exec, $colorPicker -a -l"
 
 	# Move focus with mainMod + arrow keys
 	"$mainMod, left, movefocus, l"
 	"$mainMod, right, movefocus, r"
 	"$mainMod, up, movefocus, u"
 	"$mainMod, down, movefocus, d"
+
+	# Resize windows
+	"Ctrl+$mainMod, left, resizeactive, -20 0"
+    "Ctrl+$mainMod, right, resizeactive, 20 0"
+	"Ctrl+$mainMod, up, resizeactive, 0 20"
+	"Ctrl+$mainMod, down, resizeactive, 0 -20"
 
 	# Switch workspaces with mainMod + [0-9]
 	"$mainMod, 1, workspace, 1"
