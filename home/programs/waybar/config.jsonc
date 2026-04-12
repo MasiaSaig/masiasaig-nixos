@@ -26,10 +26,10 @@
     "hyprland/workspaces"
   ],
   "modules-right": [
-    //"network",
     // "mpd",
     //"battery",
     "group/media",
+    // "network",
     "group/hardware",
     "custom/notification"
   ]
