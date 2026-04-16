@@ -26,6 +26,7 @@
     ./programs/git.nix
     ./programs/neovim.nix
     ./programs/pavucontrol.nix
+    ./programs/hyprsunset.nix
 
     #./programs/claude-code.nix
     #./programs/bash.nix
