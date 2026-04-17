@@ -27,9 +27,9 @@
     ./programs/neovim.nix
     ./programs/pavucontrol.nix
     ./programs/hyprsunset.nix
+    ./programs/bash.nix
 
     #./programs/claude-code.nix
-    #./programs/bash.nix
   ];
 
   # Home Manager's information of user.
