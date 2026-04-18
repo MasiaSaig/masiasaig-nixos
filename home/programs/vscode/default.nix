@@ -16,7 +16,6 @@
       ];
 
       userSettings = {
-
         # Sets different font for comments
         "vscode_custom_css.imports" = [
           "file:///home/masiasaig/.vscode/vs-code-styles.css"
@@ -32,6 +31,8 @@
             }
           ];
         };
+        "terminal.integrated.defaultProfile.linux" = "bash";
+        #"terminal.integrated.fontFamily" = "FiraCode Nerd Font";
       };
     };
   };

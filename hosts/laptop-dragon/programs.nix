@@ -13,6 +13,7 @@
       # Compatibility layer allows X11 application to run on Wayland compositor, ensures legacy apps to function in modern Wayland environment.
       xwayland.enable = true;
     };
+    starship.enable = true;
   };
 
   # List pakages installed in system profile. Search with:
@@ -23,6 +24,7 @@
     #wget
     git
     htop
+    starship
     
     # Screen locker
     hyprlock
