@@ -8,12 +8,12 @@
         {
           time = "21:00";
           temperature = 5500;  # warm/orange tint at night
-          gamma = 90;
+          gamma = 0.9;
         }
         {
           time = "08:00";
           temperature = 6500;  # neutral/daylight color
-          gamma = 100;
+          gamma = 1;
         }
       ];
     };
