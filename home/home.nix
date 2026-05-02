@@ -1,14 +1,15 @@
 { config, pkgs, ... }:
 
+### ROLLBACK HOME MANAGER
+# >> home-manager generations
+# >> /nix/store/...-home-manager-generation/activate
+### SWITCH TO HOME MANAGER
+# >> home-manager switch --flake .#masiasaig
+### CLEAN GARBAGES
+# >> nix-collect-garbage
+
 {
-  # HOW TO ROLLBACK HOME MANAGER
-  # >> home-manager generations
-  # >> /nix/store/...-home-manager-generation/activate
-
-  # HOW TO SWITCH TO HOME MANAGER
-  # >> home-manager switch --flake .#masiasaig
-
-  # Imports modules, which can/should be able to switch ON/OFF
+  # Imports modules, which should be able to switch ON/OFF
   imports = [ 
     ./hyprland/default.nix
     
@@ -28,8 +29,6 @@
     ./programs/pavucontrol.nix
     ./programs/hyprsunset.nix
     ./programs/bash.nix
-
-    #./programs/claude-code.nix
   ];
 
   # Home Manager's information of user.
@@ -37,6 +36,11 @@
   home.homeDirectory = "/home/masiasaig";
 
   nixpkgs.config.allowUnfree = true;
+
+
+  
+
+
 
   #########################################################################
 

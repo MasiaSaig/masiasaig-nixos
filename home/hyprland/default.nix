@@ -60,6 +60,7 @@
         "hyprlock || hyprctl dispatch exit"
         "killall waybar & sleep 2 & waybar"
         "hyprpaper"
+        "lxqt-policykit-agent"
         "slepp 2 & hyprsunset"
         "sleep 2 & discord"
       ];

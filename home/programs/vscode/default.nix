@@ -16,6 +16,10 @@
       ];
 
       userSettings = {
+        "editor.tabSize" = "2";
+        "editor.insertSpaces" = true;
+        "editor.detectIndentation" = false;
+
         # Sets different font for comments
         "vscode_custom_css.imports" = [
           "file:///home/masiasaig/.vscode/vs-code-styles.css"

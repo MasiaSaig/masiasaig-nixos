@@ -3,9 +3,9 @@
 {
   wayland.windowManager.hyprland.settings = {
     "$terminal" = "kitty";
-    "$fileManager" = "dolphin";
+    "$fileManager" = "thunar";
     "$menu" = "hyprlauncher";
-    # For some reason, hyprshot does not freeze screen when using variable
+    # hyprshot does not freeze screen when using variable
     #"$screenShot" = "hyprshot";
     "$colorPicker" = "hyprpicker";
 

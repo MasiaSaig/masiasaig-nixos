@@ -39,7 +39,7 @@
       theme = "rings";
       themePackages = with pkgs; [
         # By default, we would install all animations
-	(adi1090x-plymouth-themes.override {
+	      (adi1090x-plymouth-themes.override {
           selected_themes = [ "rings" ];
         })
       ];
