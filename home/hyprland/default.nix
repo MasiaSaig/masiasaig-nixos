@@ -21,7 +21,7 @@
     settings = {
       monitor = [
         "eDP-1, preferred, auto, 1"
-        "HDMI-A-1, 2560x1440@60, auto-right, 1"
+        "HDMI-A-1, preferred, auto-right, 1"
       ];
       # "HDMI-A-1, 2048x1080@60, auto-right, 1"
       # "HDMI-A-1, preferred, auto-right, 1"
