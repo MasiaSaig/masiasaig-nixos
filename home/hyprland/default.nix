@@ -21,8 +21,10 @@
     settings = {
       monitor = [
         "eDP-1, preferred, auto, 1"
-        "HDMI-A-1, preferred, auto-up, 1"
+        "HDMI-A-1, 2560x1440@60, auto-right, 1"
       ];
+      # "HDMI-A-1, 2048x1080@60, auto-right, 1"
+      # "HDMI-A-1, preferred, auto-right, 1"
       
       general = {
         gaps_in = 2;
@@ -61,8 +63,10 @@
         "killall waybar & sleep 2 & waybar"
         "hyprpaper"
         "lxqt-policykit-agent"
+
         "slepp 2 & hyprsunset"
         "sleep 2 & discord"
+        "sleep 2 & hypridle"
       ];
     };
   };
