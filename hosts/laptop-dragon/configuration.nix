@@ -82,6 +82,9 @@
   nixpkgs.config.allowUnfree = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings = {
+    cores = 10;
+  };
 
   # Set default editor to vim
   environment.variables.EDITOR = "nvim";
