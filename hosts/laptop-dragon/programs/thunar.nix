@@ -20,4 +20,8 @@
     papirus-icon-theme
     adwaita-icon-theme
   ];
+
+  # Enable the XDG terminal execution spec
+  xdg.terminal-exec.enable = true;
+  xdg.terminal-exec.settings.default = [ "kitty.desktop" ];
 }
