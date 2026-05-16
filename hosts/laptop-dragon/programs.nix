@@ -10,6 +10,8 @@
     htop
     brightnessctl
     swaynotificationcenter    # Notification daemon (swaync)
+
+    docker-buildx
   ];
 
   environment.sessionVariables = {
