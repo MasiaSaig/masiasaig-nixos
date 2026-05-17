@@ -8,7 +8,6 @@
   imports =
     [ 
       # Include the results of the hardware scan.
-      # results in: (import ./hardware-configuration.nix {inherit config pkgs;})
       ./hardware-configuration.nix
       ./boot.nix
       ./nvidia.nix
@@ -23,12 +22,14 @@
       ./programs/thunderbird.nix
       ./programs/git.nix
       ./programs/neovim.nix
-      ./programs/hyprshot.nix
-      ./programs/hyprlock.nix
       ./programs/starship.nix
       ./programs/drawing.nix
       ./programs/dbeaver.nix
       ./programs/thunar.nix
+      ./programs/quickshell.nix
+
+      #./programs/hyprshot.nix
+      #./programs/hyprlock.nix
     ];
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -37,7 +38,6 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -65,6 +65,12 @@
     variant = "";
   };
 
+  services.dbus.packages = with pkgs; [ dconf ];
+  # Services for Noctalia (enables wifi, bluetooth, power-profile, battery feature)
+  hardware.bluetooth.enable = true;
+  # services.power-profiles-daemon.enable = true;   # CONFLIC with tlp
+  services.upower.enable = true;
+
   environment.systemPackages = with pkgs; [
     docker-compose
   ];
@@ -89,7 +95,7 @@
   # Set default editor to vim
   environment.variables.EDITOR = "nvim";
 
-  # List services that you want to enable:
+
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;

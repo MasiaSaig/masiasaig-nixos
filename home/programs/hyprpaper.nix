@@ -1,4 +1,4 @@
-{ pkgs, config,  ... }:
+{ pkgs, ... }:
 
 let
   wallpaper = "~/Pictures/wallpapers/0.webp";

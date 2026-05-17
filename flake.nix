@@ -1,39 +1,56 @@
 {
-  # Requires: git, flakes, home manager
-
-  description = "Initial flake combining whole OS together with home-manager and programs";
+  description = "Flake combining whole OS together with home-manager and programs";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.11";
-    #nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    quickshell = {
+      url = "github:outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.11";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
-      /*url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";*/
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    noctalia,
+    quickshell,
+    ...
+  } @inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-    in {
-
+    in
+  {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       inherit system;
-      #specialArgs = { inherit inputs; };
+      specialArgs = { inherit inputs; };
       modules = [
         ./hosts/laptop-dragon/configuration.nix
-      ];
-    };
 
-    homeConfigurations.masiasaig = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
-
-      modules = [
-        ./home/home.nix
+        home-manager.nixosModules.home-manager
+        {
+          # Home Manager settings
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.masiasaig = import ./home/home.nix;
+          # Optional backup extension
+          home-manager.backupFileExtension = "backup";
+          home-manager.extraSpecialArgs = {
+            inherit inputs;
+          };
+        }
       ];
     };
   };

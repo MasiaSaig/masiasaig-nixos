@@ -1,45 +1,35 @@
-{ config, pkgs, ... }:
-
-### ROLLBACK HOME MANAGER
-# >> home-manager generations
-# >> /nix/store/...-home-manager-generation/activate
-### SWITCH TO HOME MANAGER
-# >> home-manager switch --flake .#masiasaig
-### CLEAN GARBAGES
-# >> nix-collect-garbage
+{ config, pkgs, inputs, ... }:
 
 {
   # Imports modules, which should be able to switch ON/OFF
-  imports = [ 
+  imports = [
+    inputs.noctalia.homeModules.default
     ./hyprland/default.nix
     
-    ./programs/waybar/default.nix
-    ./programs/wlogout/default.nix
-    ./programs/hypridle/default.nix
-    ./programs/hyprlauncher/default.nix
-    ./programs/hyprpicker/default.nix
+    #./programs/waybar/default.nix
+    #./programs/wlogout/default.nix
+    #./programs/hypridle/default.nix
+    #./programs/hyprlauncher/default.nix
+    #./programs/hyprpicker/default.nix
     ./programs/vscode/default.nix
 
     ./programs/discord.nix
-    ./programs/hyprpaper.nix
+    #./programs/hyprpaper.nix
     ./programs/hyprshot.nix
     ./programs/kitty.nix
     ./programs/git.nix
     ./programs/neovim.nix
-    ./programs/pavucontrol.nix
+    #./programs/pavucontrol.nix
     ./programs/hyprsunset.nix
     ./programs/bash.nix
   ];
+  programs.noctalia-shell = {
+    enable = true;
+  };
 
   # Home Manager's information of user.
   home.username = "masiasaig";
   home.homeDirectory = "/home/masiasaig";
-
-  nixpkgs.config.allowUnfree = true;
-
-
-  
-
 
 
   #########################################################################
@@ -51,32 +41,6 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "25.11"; # Please read the comment before changing.
-
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
-  /*home.packages = [
-  # It is sometimes useful to fine-tune packages, for example, by applying
-  # overrides. You can do that directly here, just don't forget the
-  # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-  # fonts?
-  # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-  ];*/
-
-  # Building this configuration will create a copy of 'dotfiles/screenrc' in
-  # the Nix store. Activating the configuration will then make '~/.screenrc' a
-  # symlink to the Nix store copy.
-  # ".screenrc".source = dotfiles/screenrc;
-  
-  # Home Manager can also manage your environment variables through
-  # 'home.sessionVariables'. These will be explicitly sourced when using a
-  # shell provided by Home Manager. If you don't want to manage your shell
-  # through Home Manager then you have to manually source 'hm-session-vars.sh'
-  # located at either:
-  #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
-  # or
-  #  ~/.local/state/nix/profiles/profile/etc/profile.d/hm-session-vars.sh
-  # or
-  #  /etc/profiles/per-user/root/etc/profile.d/hm-session-vars.sh
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

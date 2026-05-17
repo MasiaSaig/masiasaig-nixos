@@ -9,7 +9,7 @@
     git
     htop
     brightnessctl
-    swaynotificationcenter    # Notification daemon (swaync)
+    #swaynotificationcenter    # Notification daemon (swaync)
 
     docker-buildx
   ];

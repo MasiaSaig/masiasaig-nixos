@@ -1,5 +1,5 @@
 
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   programs.neovim = {
@@ -9,6 +9,9 @@
     extraConfig = ''
       set clipboard=unnamedplus
     '';
+
+    withRuby = false;
+    withPython3 = false;
   };
 }
 

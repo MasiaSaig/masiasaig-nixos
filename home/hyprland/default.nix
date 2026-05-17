@@ -6,17 +6,18 @@
 
   imports = [
     ./input.nix
-    ./decoration.nix
-    ./animation.nix
+    #./decoration.nix
+    #./animation.nix
     ./binds.nix
-    ./windowrule.nix
-    ./env.nix
+    #./windowrule.nix
+    #./env.nix
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
+    configType = "hyprlang";
     # conflicts with UWSM (Universal Wayland Session Manager)
-    systemd.enable = false;
+    #systemd.enable = false;
 
     settings = {
       monitor = [
@@ -26,7 +27,7 @@
       # "HDMI-A-1, 2048x1080@60, auto-right, 1"
       # "HDMI-A-1, preferred, auto-right, 1"
       
-      general = {
+      /*general = {
         gaps_in = 2;
         gaps_out = 4;
         border_size = 2;
@@ -55,18 +56,19 @@
       ecosystem = {
         no_donation_nag = true;
 	      no_update_news = false;
-      };
+      };*/
 
       # Auto-start
       exec-once = [
         "hyprlock || hyprctl dispatch exit"
-        "killall waybar & sleep 2 & waybar"
+        "sleep 2 & noctalia-shell"
+        "sleep 2 & discord"
+
+        /*"killall waybar & sleep 2 & waybar"
         "hyprpaper"
         "lxqt-policykit-agent"
-
         "slepp 2 & hyprsunset"
-        "sleep 2 & discord"
-        "sleep 2 & hypridle"
+        "sleep 2 & hypridle"*/
       ];
     };
   };

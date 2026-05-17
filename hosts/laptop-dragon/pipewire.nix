@@ -27,5 +27,6 @@
     enable = true;
     # Add gtk here as it's needed for file pickers/portals
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config.common.default = "*";
   };
 }
