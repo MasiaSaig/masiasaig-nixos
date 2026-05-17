@@ -60,7 +60,7 @@
 
       # Auto-start
       exec-once = [
-        "sleep 2 & noctalia-shell"
+        "noctalia-shell"
         #"sleep 2 & discord"
 
         # "killall waybar & sleep 2 & waybar"

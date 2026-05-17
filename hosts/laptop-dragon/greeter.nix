@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 #let
   #tuigreet = "${pkgs.tuigreet}/bin/tuigreet";
@@ -31,7 +31,7 @@
         # on successful auth it launches Hyprland,
         # which triggers noctalia-shell via home-manager
         command = lib.concatStringsSep " " [
-          "${pkgs.greetd.tuigreet}/bin/tuigreet"
+          "${pkgs.tuigreet}/bin/tuigreet"
           "--time"                        # show clock
           #"--time-format '%H:%M  %a %d %b'"
           "--remember"                    # remember last user
@@ -48,9 +48,6 @@
   # greetd needs to be able to start a Wayland compositor;
   # without this, the TTY seat is not properly handed over
   security.pam.services.greetd.enableGnomeKeyring = false;
-
-  # Ensure the greeter TTY is on tty1 (standard for Wayland)
-  services.greetd.vt = 1;
 
   # Required: tuigreet runs before the user session,
   # so XDG_RUNTIME_DIR must exist for Wayland socket creation
