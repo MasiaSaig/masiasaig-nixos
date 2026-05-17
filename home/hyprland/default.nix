@@ -61,7 +61,7 @@
       # Auto-start
       exec-once = [
         "noctalia-shell"
-        #"sleep 2 & discord"
+        "sleep 2 & discord"
 
         # "killall waybar & sleep 2 & waybar"
         # "hyprlock || hyprctl dispatch exit"
