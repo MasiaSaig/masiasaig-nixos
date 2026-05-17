@@ -20,7 +20,7 @@
     ./programs/git.nix
     ./programs/neovim.nix
     #./programs/pavucontrol.nix
-    ./programs/hyprsunset.nix
+    #./programs/hyprsunset.nix
     ./programs/bash.nix
   ];
   programs.noctalia-shell = {
