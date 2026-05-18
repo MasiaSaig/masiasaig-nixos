@@ -5,7 +5,7 @@
     "$terminal" = "kitty";
     "$fileManager" = "thunar";
     "$colorPicker" = "hyprpicker";
-    "$ipc" = "qs -c noctalia-shell ipc call";
+    "$ipc" = "noctalia-shell ipc call";
     #"$menu" = "hyprlauncher";
     # hyprshot does not freeze screen when using variable
     #"$screenShot" = "hyprshot";
@@ -35,8 +35,8 @@
       # Move focus with mainMod + arrow keys
       "$mainMod, left, movefocus, l"
       "$mainMod, right, movefocus, r"
-      "$mainMod, up, movefocus, u"
-      "$mainMod, down, movefocus, d"
+      "$mainMod, up, movefocus, d"
+      "$mainMod, down, movefocus, u"
 
       # Resize windows
       "Ctrl+$mainMod, left, resizeactive, -20 0"
