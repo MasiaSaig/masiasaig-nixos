@@ -1,0 +1,33 @@
+{ pkgs, inputs, ... }:
+
+{
+  imports = [
+    inputs.noctalia.homeModules.default
+  ];
+
+  programs.noctalia-shell = {
+    enable = true;
+
+    plugins = {
+      sources = [
+        {
+          enabled = true;
+          name = "Official Noctalia Plugins";
+          url = "https://github.com/noctalia-dev/noctalia-plugins";
+        }
+      ];
+      states = {
+        screen-recorder = {
+          enabled = true;
+          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+        };
+        clipboard = {
+          enabled = true;
+          sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+        };
+      };
+
+      version = 2;
+    };
+  }; 
+}

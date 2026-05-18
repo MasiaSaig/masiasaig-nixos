@@ -3,8 +3,8 @@
 {
   # Imports modules, which should be able to switch ON/OFF
   imports = [
-    inputs.noctalia.homeModules.default
     ./hyprland/default.nix
+    ./noctalia.nix
     
     #./programs/waybar/default.nix
     #./programs/wlogout/default.nix
@@ -23,9 +23,6 @@
     #./programs/hyprsunset.nix
     ./programs/bash.nix
   ];
-  programs.noctalia-shell = {
-    enable = true;
-  };
 
   # Home Manager's information of user.
   home.username = "masiasaig";

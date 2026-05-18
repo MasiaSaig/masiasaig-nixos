@@ -27,36 +27,36 @@
       # "HDMI-A-1, 2048x1080@60, auto-right, 1"
       # "HDMI-A-1, preferred, auto-right, 1"
       
-      /*general = {
-        gaps_in = 2;
-        gaps_out = 4;
-        border_size = 2;
+      general = {
+        # gaps_in = 2;
+        gaps_out = 8;
+        # border_size = 2;
         resize_on_border = true;
-        "col.active_border" = "rgba(5175adee) rgba(4461a9ee) 45deg";
-        "col.inactive_border" = "rgba(607ba8aa)";
-        allow_tearing = false;
-        layout = "dwindle";
+        # "col.active_border" = "rgba(5175adee) rgba(4461a9ee) 45deg";
+        # "col.inactive_border" = "rgba(607ba8aa)";
+        # allow_tearing = false;
+        # layout = "dwindle";
       };
 
-      dwindle = {
-        pseudotile = true;
-        preserve_split = true;
-        force_split = 2;
-      };
+      # dwindle = {
+      #   pseudotile = true;
+      #   preserve_split = true;
+      #   force_split = 2;
+      # };
 
-      master = {
-        new_status = "master";
-      };
+      # master = {
+      #   new_status = "master";
+      # };
 
-      misc = {
-        force_default_wallpaper = 0;
-	      disable_hyprland_logo = true;
-      };
+      # misc = {
+      #   force_default_wallpaper = 0;
+	    #   disable_hyprland_logo = true;
+      # };
 
-      ecosystem = {
-        no_donation_nag = true;
-	      no_update_news = false;
-      };*/
+      # ecosystem = {
+      #   no_donation_nag = true;
+	    #   no_update_news = false;
+      # };
 
       # Auto-start
       exec-once = [

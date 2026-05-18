@@ -20,10 +20,12 @@
       "$mainMod, M, exit"
       "$mainMod, E, exec, $fileManager"
       "$mainMod, V, togglefloating"
-      "$mainMod, SPACE, exec, $ipc launcher toggle"
-      "$mainMod, comma, exec, $ipc settings toggle"
       #"$mainMod, P, pseudo" # dwindle
       #"$mainMod, J, togglesplit" # dwindle
+
+      # Noctalia
+      "$mainMod, SPACE, exec, $ipc launcher toggle"
+      "$mainMod, comma, exec, $ipc settings toggle"
       
       # Screen shot
       "$mainMod SHIFT, S, exec, hyprshot -m region -z --clipboard-only"

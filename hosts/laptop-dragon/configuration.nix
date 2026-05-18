@@ -27,6 +27,9 @@
       ./programs/dbeaver.nix
       ./programs/thunar.nix
       ./programs/quickshell.nix
+      # ./programs/wl-screenrc.nix
+      ./programs/gpu-screen-recorder.nix
+      ./programs/cliphist.nix
 
       #./programs/hyprshot.nix
       #./programs/hyprlock.nix

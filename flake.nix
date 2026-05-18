@@ -1,4 +1,7 @@
 {
+  ### CLEAN GARBAGES
+  # >> nix-collect-garbage
+
   description = "Flake combining whole OS together with home-manager and programs";
 
   inputs = {
