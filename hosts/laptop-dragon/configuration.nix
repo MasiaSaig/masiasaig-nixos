@@ -16,6 +16,7 @@
       ./programs.nix
       ./tlp.nix
       ./greeter.nix
+      ./docker.nix
 
       ./programs/hyprland.nix
       ./programs/firefox.nix
@@ -27,12 +28,14 @@
       ./programs/dbeaver.nix
       ./programs/thunar.nix
       ./programs/quickshell.nix
-      # ./programs/wl-screenrc.nix
       ./programs/gpu-screen-recorder.nix
       ./programs/cliphist.nix
+      ./programs/qbittorrent.nix
+      ./programs/vlc.nix
 
       #./programs/hyprshot.nix
       #./programs/hyprlock.nix
+      #./programs/wl-screenrc.nix
     ];
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -74,11 +77,6 @@
   # services.power-profiles-daemon.enable = true;   # CONFLIC with tlp
   services.upower.enable = true;
 
-  environment.systemPackages = with pkgs; [
-    docker-compose
-  ];
-  virtualisation.docker.enable = true;
-  virtualisation.podman.enable = true;
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.masiasaig = {
     isNormalUser = true;
@@ -91,9 +89,6 @@
   nixpkgs.config.allowUnfree = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  nix.settings = {
-    cores = 10;
-  };
 
   # Set default editor to vim
   environment.variables.EDITOR = "nvim";
