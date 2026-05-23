@@ -22,6 +22,7 @@
     #./programs/pavucontrol.nix
     #./programs/hyprsunset.nix
     ./programs/bash.nix
+    ./programs/thunderbird.nix
   ];
 
   # Home Manager's information of user.

@@ -3,7 +3,27 @@
 # FOR MORE VISITNG: nixos.wiki/wiki/nvidia
 #######
 {
-  hardware.graphics.enable = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+      nvidia-vaapi-driver
+    ];
+  };
+
+  # Tell libva to use the Nvidia driver explicitly
+  # environment.sessionVariables = {
+  #   LIBVA_DRIVER_NAME = "nvidia";
+  # };
+
+  boot.kernelModules = [
+    "nvidia"
+    "nvidia_modeset"
+    # "nvidia_uvm"
+    # "nvidia_drm"
+    # "i2c-nvidia_gpu"
+  ];
 
   # offloading - meaning, device will use integrated Intel GPU 
   # and use Nvidia one, only when specified with
