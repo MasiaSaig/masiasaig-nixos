@@ -10,12 +10,12 @@
     #./programs/wlogout/default.nix
     #./programs/hypridle/default.nix
     #./programs/hyprlauncher/default.nix
-    ./programs/hyprpicker/default.nix
+    # ./programs/hyprpicker/default.nix
     ./programs/vscode/default.nix
 
     ./programs/discord.nix
     #./programs/hyprpaper.nix
-    ./programs/hyprshot.nix
+    # ./programs/hyprshot.nix
     ./programs/kitty.nix
     ./programs/git.nix
     ./programs/neovim.nix

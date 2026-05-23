@@ -4,11 +4,7 @@
   wayland.windowManager.hyprland.settings = {
     "$terminal" = "kitty";
     "$fileManager" = "thunar";
-    "$colorPicker" = "hyprpicker";
     "$ipc" = "noctalia-shell ipc call";
-    #"$menu" = "hyprlauncher";
-    # hyprshot does not freeze screen when using variable
-    #"$screenShot" = "hyprshot";
 
     # Bind keyboard keysi
     "$mainMod" = "SUPER";
@@ -26,13 +22,17 @@
       # Noctalia
       "$mainMod, SPACE, exec, $ipc launcher toggle"
       "$mainMod, comma, exec, $ipc settings toggle"
+      ## Screen Toolkig - plugin
+      "$mainMod SHIFT, C, exec, $ipc plugin:screen-toolkit colorPicker"
+      "$mainMod SHIFT, R, exec, $ipc plugin:screen-toolkit recordMp4"
+      "$mainMod SHIFT, M, exec, $ipc plugin:screen-toolkit measure"
       
       # Screen shot
-      "$mainMod SHIFT, S, exec, hyprshot -m region -z --clipboard-only"
-      ", Print_L, exec, hyprshot -m output"
+      "$mainMod SHIFT, S, exec, grim -g \"$(slurp -d)\" - | wl-copy"
+      ", Print_L, exec, grim - | wl-copy"
       
       # Color picker
-      "$mainMod SHIFT, C, exec, $colorPicker -a -l"
+      # "$mainMod SHIFT, C, exec, $colorPicker -a -l"
 
       # Move focus with mainMod + arrow keys
       "$mainMod, left, movefocus, l"
@@ -75,15 +75,15 @@
       "$mainMod SHIFT, F, movetoworkspace, special:magic"
 
       #Scroll through existing workspaces with mainMod + scroll
-      "$mainMod, mouse_down, workspace, e+1"
-      "$mainMod, mouse_up, workspace, e-1"
+      # "$mainMod, mouse_down, workspace, e+1"
+      # "$mainMod, mouse_up, workspace, e-1"
     ];
 
     # Bind mouse
     bindm = [
       # Move/resize windows with mainMod + LMB/RMB and dragging
-      "$mainMod, mouse:272, movewindow"
-      "$mainMod, mouse:273, resizewindow"
+      # "$mainMod, mouse:272, movewindow"
+      # "$mainMod, mouse:273, resizewindow"
     ];
 
     # Bind laptop multimedia keys (volume, brightness, etc.)

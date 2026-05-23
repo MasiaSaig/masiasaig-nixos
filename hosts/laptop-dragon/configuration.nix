@@ -20,7 +20,6 @@
 
       ./programs/hyprland.nix
       ./programs/firefox.nix
-      ./programs/thunderbird.nix
       ./programs/git.nix
       ./programs/neovim.nix
       ./programs/starship.nix
@@ -28,11 +27,12 @@
       ./programs/dbeaver.nix
       ./programs/thunar.nix
       ./programs/quickshell.nix
-      ./programs/gpu-screen-recorder.nix
       ./programs/cliphist.nix
       ./programs/qbittorrent.nix
       ./programs/vlc.nix
+      ./programs/screen-toolkit.nix
 
+      # ./programs/gpu-screen-recorder.nix
       #./programs/hyprshot.nix
       #./programs/hyprlock.nix
       #./programs/wl-screenrc.nix
