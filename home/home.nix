@@ -23,6 +23,7 @@
     #./programs/hyprsunset.nix
     ./programs/bash.nix
     ./programs/thunderbird.nix
+    ./programs/cliphist.nix
   ];
 
   # Home Manager's information of user.

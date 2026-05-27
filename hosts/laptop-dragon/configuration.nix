@@ -27,10 +27,10 @@
       ./programs/dbeaver.nix
       ./programs/thunar.nix
       ./programs/quickshell.nix
-      ./programs/cliphist.nix
       ./programs/qbittorrent.nix
       ./programs/vlc.nix
-      ./programs/screen-toolkit.nix
+      ./programs/noctalia-plugins/screen-toolkit.nix
+      ./programs/noctalia-plugins/clipboard.nix
 
       # ./programs/gpu-screen-recorder.nix
       #./programs/hyprshot.nix
