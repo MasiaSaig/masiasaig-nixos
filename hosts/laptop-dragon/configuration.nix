@@ -31,6 +31,7 @@
       ./programs/vlc.nix
       ./programs/noctalia-plugins/screen-toolkit.nix
       ./programs/noctalia-plugins/clipboard.nix
+      ./programs/chrome.nix
 
       # ./programs/gpu-screen-recorder.nix
       #./programs/hyprshot.nix
