@@ -35,14 +35,14 @@
         # "col.active_border" = "rgba(5175adee) rgba(4461a9ee) 45deg";
         # "col.inactive_border" = "rgba(607ba8aa)";
         # allow_tearing = false;
-        # layout = "dwindle";
+        layout = "dwindle";
       };
 
-      # dwindle = {
-      #   pseudotile = true;
-      #   preserve_split = true;
-      #   force_split = 2;
-      # };
+      dwindle = {
+        pseudotile = true;
+        preserve_split = true;
+        force_split = 2;
+      };
 
       # master = {
       #   new_status = "master";
@@ -53,10 +53,10 @@
 	      disable_hyprland_logo = true;
       };
 
-      # ecosystem = {
-      #   no_donation_nag = true;
-	    #   no_update_news = false;
-      # };
+      ecosystem = {
+        no_donation_nag = true;
+	      no_update_news = false;
+      };
 
       # Auto-start
       exec-once = [
