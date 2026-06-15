@@ -94,7 +94,10 @@
   # Set default editor to vim
   environment.variables.EDITOR = "nvim";
 
-
+  swapDevices = [{
+    device = "/var/lib/swapfile";
+    size = 16*1024; # 16 GiB
+  }];
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
