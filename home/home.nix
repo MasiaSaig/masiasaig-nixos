@@ -24,6 +24,7 @@
     ./programs/bash.nix
     ./programs/thunderbird.nix
     ./programs/cliphist.nix
+    ./programs/krita.nix
   ];
 
   # Home Manager's information of user.
