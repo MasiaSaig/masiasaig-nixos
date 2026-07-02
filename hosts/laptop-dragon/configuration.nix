@@ -23,7 +23,6 @@
       ./programs/git.nix
       ./programs/neovim.nix
       ./programs/starship.nix
-      ./programs/drawing.nix
       ./programs/dbeaver.nix
       ./programs/thunar.nix
       ./programs/quickshell.nix
