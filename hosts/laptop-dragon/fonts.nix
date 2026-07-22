@@ -10,5 +10,6 @@
     font-awesome
     #inter
     nerd-fonts.ubuntu
+    intel-one-mono
   ];
 }
