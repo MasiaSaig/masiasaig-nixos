@@ -16,6 +16,8 @@
       ];
 
       userSettings = {
+        "editor.fontFamily" = "Fira Code";
+        "editor.fontLigatures" = true;
         "editor.tabSize" = "2";
         "editor.insertSpaces" = true;
         "editor.detectIndentation" = false;
