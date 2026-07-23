@@ -25,6 +25,10 @@
           enabled = true;
           sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
         };
+        keybind-cheatsheet = {
+          enabled = true;
+          sourceUrl = "https://github.com/noctalia-dev/community-plugins/";
+        };
         # screen-recorder = {
         #   enabled = true;
         #   sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
