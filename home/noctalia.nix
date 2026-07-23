@@ -29,6 +29,10 @@
           enabled = true;
           sourceUrl = "https://github.com/noctalia-dev/community-plugins/";
         };
+        notes = {
+          enabled = true;
+          sourceUrl = "https://github.com/noctalia-dev/official-plugins/";
+        };
         # screen-recorder = {
         #   enabled = true;
         #   sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
