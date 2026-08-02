@@ -10,30 +10,32 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./boot.nix
-      ./nvidia.nix
-      ./pipewire.nix
       ./fonts.nix
-      ./programs.nix
-      ./tlp.nix
       ./greeter.nix
-      ./docker.nix
 
-      ./programs/hyprland.nix
-      ./programs/firefox.nix
-      ./programs/git.nix
-      ./programs/neovim.nix
-      ./programs/starship.nix
-      ./programs/dbeaver.nix
-      ./programs/thunar.nix
-      ./programs/quickshell.nix
-      ./programs/qbittorrent.nix
-      ./programs/vlc.nix
-      ./programs/noctalia-plugins/screen-toolkit.nix
-      ./programs/noctalia-plugins/clipboard.nix
-      ./programs/chrome.nix
+      ../hardware/nvidia.nix
 
+      ../programs/pipewire.nix
+      ../programs/tlp.nix
+      ../programs/docker.nix
+      ../programs/hyprland.nix
+      ../programs/firefox.nix
+      ../programs/git.nix
+      ../programs/neovim.nix
+      ../programs/starship.nix
+      ../programs/dbeaver.nix
+      ../programs/thunar.nix
+      ../programs/qbittorrent.nix
+      ../programs/vlc.nix
+      ../programs/chrome.nix
+      ../programs/unzip.nix
+      ../programs/htop.nix
+      ../programs/brightnessctl.nix
+      ../programs/noctalia.nix
+
+      # ./programs/quickshell.nix
       # ./programs/gpu-screen-recorder.nix
-      #./programs/hyprshot.nix
+      ../programs/hyprshot.nix
       #./programs/hyprlock.nix
       #./programs/wl-screenrc.nix
     ];
@@ -97,6 +99,13 @@
     device = "/var/lib/swapfile";
     size = 16*1024; # 16 GiB
   }];
+
+  environment.sessionVariables = {
+    # Hint Electron apps use Wayland
+    NIXOS_OZONE_WL = "1";
+  };
+
+  security.polkit.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;

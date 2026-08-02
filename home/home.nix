@@ -4,13 +4,12 @@
   # Imports modules, which should be able to switch ON/OFF
   imports = [
     ./hyprland/default.nix
-    ./noctalia.nix
+    ./noctalia/default.nix
     
     #./programs/waybar/default.nix
     #./programs/wlogout/default.nix
     #./programs/hypridle/default.nix
-    #./programs/hyprlauncher/default.nix
-    # ./programs/hyprpicker/default.nix
+    ./programs/hyprpicker/default.nix
     ./programs/vscode/default.nix
 
     ./programs/discord.nix
@@ -20,7 +19,6 @@
     ./programs/git.nix
     ./programs/neovim.nix
     #./programs/pavucontrol.nix
-    #./programs/hyprsunset.nix
     ./programs/bash.nix
     ./programs/thunderbird.nix
     ./programs/cliphist.nix

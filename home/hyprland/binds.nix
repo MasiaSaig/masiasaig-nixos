@@ -4,7 +4,7 @@
   wayland.windowManager.hyprland.settings = {
     "$terminal" = "kitty";
     "$fileManager" = "thunar";
-    "$ipc" = "noctalia-shell ipc call";
+    "$ipc" = "noctalia msg";
 
     # Bind keyboard keysi
     "$mainMod" = "SUPER";
@@ -20,16 +20,19 @@
       #"$mainMod, J, togglesplit" # dwindle
 
       # Noctalia
-      "$mainMod, SPACE, exec, $ipc launcher toggle"
-      "$mainMod, comma, exec, $ipc settings toggle"
+      "$mainMod, SPACE, exec, $ipc panel-toggle launcher"
+      # "$mainMod, comma, exec, $ipc settings-toggle"
       ## Screen Toolkig - plugin
-      "$mainMod SHIFT, C, exec, $ipc plugin:screen-toolkit colorPicker"
-      "$mainMod SHIFT, R, exec, $ipc plugin:screen-toolkit recordMp4"
-      "$mainMod SHIFT, M, exec, $ipc plugin:screen-toolkit measure"
-      
+      "$mainMod SHIFT, C, exec, noctalia msg plugin oldirtty/color_picker:service all pick"
+      # "$mainMod SHIFT, R, exec, $ipc plugin:screen-toolkit recordMp4"
+      # "$mainMod SHIFT, M, exec, $ipc plugin:screen-toolkit measure"
+      "$mainMod SHIFT, N, exec, noctalia msg panel-toggle noctalia/notes:panel"
+
       # Screen shot
-      "$mainMod SHIFT, S, exec, grim -g \"$(slurp -d)\" - | wl-copy"
-      ", Print_L, exec, grim - | wl-copy"
+      # "$mainMod SHIFT, S, exec, grim -g \"$(slurp -d)\" - | wl-copy"
+      "$mainMod SHIFT, S, exec, noctalia msg screenshot-region"
+      ", Print_L, exec, noctalia msg screenshot-fullscreen"
+      
       
       # Color picker
       # "$mainMod SHIFT, C, exec, $colorPicker -a -l"
@@ -87,10 +90,10 @@
 
     # Bind laptop multimedia keys (volume, brightness, etc.)
     bindel = [
-      ", XF86AudioRaiseVolume, exec, $ipc volume increase"
-      ", XF86AudioLowerVolume, exec, $ipc volume decrease"
-      ", XF86MonBrightnessUp, exec, $ipc brightness increase"
-      ", XF86MonBrightnessDown, exec, $ipc brightness decrease"
+      ", XF86AudioRaiseVolume, exec, $ipc volume-up 5"
+      ", XF86AudioLowerVolume, exec, $ipc volume-down 5"
+      ", XF86MonBrightnessUp, exec, $ipc brightness-up current 5"
+      ", XF86MonBrightnessDown, exec, $ipc brightness-down current 5"
       ", XF86AudioMute, exec, $ipc volume muteOutput"
       # ",XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
       # ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
@@ -99,7 +102,7 @@
       # ",XF86MonBrightnessUp, exec, brightnessctl -e4 -n2 set 5%+"
       # ",XF86MonBrightnessDown, exec, brightnessctl -e4 -n2 set 5%-"
     ];
-        
+
     bindd = [
       # Requires playerctl
       ", XF86AudioNext, Play Next, exec, playerctl next"

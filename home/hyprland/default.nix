@@ -1,52 +1,25 @@
 { config, pkgs, ... }:
 
 {
-  # Swap /home/masiasaig/hypr/hyprland.conf with ./hyprland.conf
-  #home.file."/home/masiasaig/hypr/hyprland.conf".source = ./hyprland.conf;
-
   imports = [
     ./input.nix
-    #./decoration.nix
-    #./animation.nix
     ./binds.nix
-    #./windowrule.nix
-    #./env.nix
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
     configType = "hyprlang";
-    # conflicts with UWSM (Universal Wayland Session Manager)
-    #systemd.enable = false;
 
     settings = {
       monitor = [
         "eDP-1, preferred, auto, 1"
         "HDMI-A-1, preferred, auto-right, 1"
       ];
-      # "HDMI-A-1, 2048x1080@60, auto-right, 1"
-      # "HDMI-A-1, preferred, auto-right, 1"
       
       general = {
-        # gaps_in = 2;
         gaps_out = 8;
-        # border_size = 2;
         resize_on_border = true;
-        # "col.active_border" = "rgba(5175adee) rgba(4461a9ee) 45deg";
-        # "col.inactive_border" = "rgba(607ba8aa)";
-        # allow_tearing = false;
-        # layout = "dwindle";
       };
-
-      # dwindle = {
-      #   pseudotile = true;
-      #   preserve_split = true;
-      #   force_split = 2;
-      # };
-
-      # master = {
-      #   new_status = "master";
-      # };
 
       misc = {
         force_default_wallpaper = 0;
@@ -60,15 +33,8 @@
 
       # Auto-start
       exec-once = [
-        "noctalia-shell"
+        "noctalia"
         "sleep 2 & discord"
-
-        # "killall waybar & sleep 2 & waybar"
-        # "hyprlock || hyprctl dispatch exit"
-        # "hyprpaper"
-        # "lxqt-policykit-agent"
-        # "slepp 2 & hyprsunset"
-        # "sleep 2 & hypridle"
       ];
     };
   };

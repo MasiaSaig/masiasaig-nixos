@@ -9,4 +9,9 @@
       DontCheckDefaultBrowser = true;
     };
   };
+
+  environment.sessionVariables = {
+    # For firefox on Wayland
+    MOZ_ENABLE_WAYLAND = "1";
+  };
 }
