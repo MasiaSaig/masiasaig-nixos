@@ -11,7 +11,7 @@
     settings = {
       widget.clock = {
         type   = "clock";
-        format = "{:%d.%m.%Y %H:%M}";
+        format = "{:%H:%M - %d.%m.%Y}";
       };
 
       shell.screenshot = {
@@ -60,7 +60,7 @@
       bar.default = {
         start  = [ "launcher" "wallpaper" "workspaces" "tray" "media" ];
         center = [ "kenn/keybind-cheatsheet:keybinds" "clock" "noctalia/notes" ];
-        end    = [ "notifications" "clipboard" "network" "brightness" "volume" "battery" "session" ];
+        end    = [ "notifications" "network" "cpu" "ram" "brightness" "volume" "battery" "session" ];
       };
 
       plugins = {
