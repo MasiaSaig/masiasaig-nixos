@@ -16,7 +16,7 @@
 
       shell.screenshot = {
         directory = "~/Pictures/screenshots";
-        filename_pattern = "%d-%m-%Y_%H-%M-%S.png";  # optional, leave as-is if you like the default
+        filename_pattern = "%d-%m-%Y_%H-%M-%S.png";
         copy_to_clipboard = true;
       };
 
@@ -58,7 +58,7 @@
       };
 
       bar.default = {
-        start  = [ "launcher" "wallpaper" "workspaces" "tray" "media" ];
+        start  = [ "launcher" "wallpaper" "clipboard" "workspaces" "tray" "media" ];
         center = [ "kenn/keybind-cheatsheet:keybinds" "clock" "noctalia/notes" ];
         end    = [ "notifications" "network" "cpu" "ram" "brightness" "volume" "battery" "session" ];
       };
