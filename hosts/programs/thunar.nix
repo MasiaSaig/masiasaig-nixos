@@ -19,6 +19,7 @@
 
     papirus-icon-theme
     adwaita-icon-theme
+    adw-gtk3
   ];
 
   # Enable the XDG terminal execution spec

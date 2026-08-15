@@ -23,6 +23,7 @@
     ./programs/thunderbird.nix
     ./programs/cliphist.nix
     ./programs/krita.nix
+    ./programs/gtk.nix
   ];
 
   # Home Manager's information of user.
