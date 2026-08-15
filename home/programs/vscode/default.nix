@@ -18,7 +18,7 @@
       userSettings = {
         "editor.fontFamily" = "Fira Code";
         "editor.fontLigatures" = true;
-        "editor.tabSize" = "2";
+        "editor.tabSize" = 2;
         "editor.insertSpaces" = true;
         "editor.detectIndentation" = false;
 
@@ -38,6 +38,7 @@
           ];
         };
         "terminal.integrated.defaultProfile.linux" = "bash";
+        "gitlens.ai.model" = "gemini:gemini-3-flash-preview";
         #"terminal.integrated.fontFamily" = "FiraCode Nerd Font";
       };
     };
