@@ -92,9 +92,9 @@
     bindel = [
       ", XF86AudioRaiseVolume, exec, $ipc volume-up 5"
       ", XF86AudioLowerVolume, exec, $ipc volume-down 5"
-      ", XF86MonBrightnessUp, exec, $ipc brightness-up current 5"
-      ", XF86MonBrightnessDown, exec, $ipc brightness-down current 5"
-      ", XF86AudioMute, exec, $ipc volume muteOutput"
+      ", XF86MonBrightnessUp, exec, $ipc brightness-up 5"
+      ", XF86MonBrightnessDown, exec, $ipc brightness-down 5"
+      ", XF86AudioMute, exec, $ipc volume-mute"
       # ",XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
       # ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
       # ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
