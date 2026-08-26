@@ -107,6 +107,13 @@
 
   security.polkit.enable = true;
 
+  # automatic garbage collection and limit system configurations
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+  };
+
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
