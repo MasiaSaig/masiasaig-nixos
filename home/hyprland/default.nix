@@ -19,6 +19,12 @@
       general = {
         gaps_out = 8;
         resize_on_border = true;
+
+        layout = "dwindle";
+      };
+
+      dwindle = {
+        preserve_split = true;
       };
 
       misc = {
