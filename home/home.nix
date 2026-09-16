@@ -24,6 +24,7 @@
     ./programs/cliphist.nix
     ./programs/krita.nix
     ./programs/gtk.nix
+    ./programs/xarchiver.nix
   ];
 
   # Home Manager's information of user.
