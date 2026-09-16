@@ -5,6 +5,9 @@
     bootspec.enable = true;
     #kernelPackages = pkgs.linuxPackages_zen;
     loader = {
+      # Set boot menu timeout (use null for infinite wait)
+      timeout = 5;
+      # Ensure your bootloader is enabled (systemd-boot is default for UEFI)
       systemd-boot = {
         enable = true;
         editor = true;
@@ -27,7 +30,6 @@
       "systemd.show_status=false"
     ];
     consoleLogLevel = 0;
-    loader.timeout = 0;
     initrd = {
       verbose = false;
       systemd.enable = true;      # initrd systemd for cleaner handoff to Plymouth
