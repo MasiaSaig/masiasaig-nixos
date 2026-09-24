@@ -83,9 +83,11 @@
   users.users.masiasaig = {
     isNormalUser = true;
     description = "Masia Saig";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "kvm" ];
     packages = with pkgs; [];
   };
+
+  nixpkgs.config.android_sdk.accept_license = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
