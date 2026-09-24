@@ -25,6 +25,7 @@
     ./programs/krita.nix
     ./programs/gtk.nix
     ./programs/xarchiver.nix
+    ./programs/nodejs.nix
   ];
 
   # Home Manager's information of user.
