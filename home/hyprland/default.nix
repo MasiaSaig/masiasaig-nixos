@@ -10,6 +10,13 @@
     enable = true;
     configType = "hyprlang";
 
+    # to use Nvidia GPU (see /hosts/hardware/nvidia.nix)
+    settings = {
+      env = [
+        "AQ_DRM_DEVICES,/dev/dri/nvidia-dgpu:/dev/dri/intel-igpu"
+      ];
+    };
+
     settings = {
       monitor = [
         "eDP-1, preferred, auto, 1"

@@ -17,18 +17,19 @@
   #   LIBVA_DRIVER_NAME = "nvidia";
   # };
 
-  boot.kernelModules = [
-    "nvidia"
-    "nvidia_modeset"
-    # "nvidia_uvm"
-    # "nvidia_drm"
-    # "i2c-nvidia_gpu"
-  ];
+  # boot.kernelModules = [
+  #   "nvidia"
+  #   "nvidia_modeset"
+  #   # "nvidia_uvm"
+  #   # "nvidia_drm"
+  #   # "i2c-nvidia_gpu"
+  # ];
 
   # offloading - meaning, device will use integrated Intel GPU 
   # and use Nvidia one, only when specified with
   # >> nvidia-offload myAppToRun
   services.xserver.videoDrivers = [
+    # in PRIME mode, prefer not setting modesetting, only for OFFLOAD mode
     "modesetting" # use 'amdgpu' if your iGPU is AMD
     "nvidia"
   ];
@@ -49,6 +50,8 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
 
     prime = {
+      # Hyprland itself will select NVIDIA via AQ_DRM_DEVICES
+      # (see hyprland/default.nix)
       offload = {
         enable = true;
         enableOffloadCmd = true;
@@ -58,5 +61,17 @@
       nvidiaBusId = "PCI:1:0:0";
       # amdgpuBusId = "PCI@....';
     };
+  };
+
+  # symlink GPUs
+  services.udev.extraRules = ''
+    KERNEL=="card*", KERNELS=="0000:01:00.0", SUBSYSTEM=="drm", SUBSYSTEMS=="pci", SYMLINK+="dri/nvidia-dgpu"
+    KERNEL=="card*", KERNELS=="0000:00:02.0", SUBSYSTEM=="drm", SUBSYSTEMS=="pci", SYMLINK+="dri/intel-igpu"
+  '';
+
+  environment.sessionVariables = {
+    __NV_PRIME_RENDER_OFFLOAD = "1";
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    __VK_LAYER_NV_optimus = "NVIDIA_only";
   };
 }
