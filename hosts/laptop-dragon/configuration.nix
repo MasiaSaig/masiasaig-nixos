@@ -32,6 +32,7 @@
       ../programs/htop.nix
       ../programs/brightnessctl.nix
       ../programs/noctalia.nix
+      # ../programs/codex.nix
 
       # ./programs/quickshell.nix
       # ./programs/gpu-screen-recorder.nix
