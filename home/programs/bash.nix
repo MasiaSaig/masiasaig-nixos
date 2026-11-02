@@ -3,6 +3,13 @@
 {
   programs.bash = {
     enable = true;
+    shellAliases = {
+      ls = "ls --color=auto";
+      ll = "ls -l";
+      la = "ls -A";
+      update = "sudo nixos-rebuild switch --flake .#nixos";
+      upgrade = "sudo nixos-rebuild switch --flake .#nixos --upgrade";
+    };
     
     initExtra = ''
       #parse_git_branch() {
