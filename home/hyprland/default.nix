@@ -47,7 +47,8 @@
       # Auto-start
       exec-once = [
         "noctalia"
-        "sleep 2 & discord"
+        # "sleep 2 & discord"
+        # "sleep 2 & vesktop"
       ];
     };
   };
