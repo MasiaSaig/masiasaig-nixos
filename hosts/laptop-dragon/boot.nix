@@ -2,7 +2,7 @@
 
 {
   boot = {
-    bootspec.enable = true;
+    # bootspec.enable = true;       # (Removed)
     #kernelPackages = pkgs.linuxPackages_zen;
     loader = {
       # Set boot menu timeout (use null for infinite wait)
@@ -30,10 +30,11 @@
       "systemd.show_status=false"
     ];
     consoleLogLevel = 0;
-    initrd = {
-      verbose = false;
-      systemd.enable = true;      # initrd systemd for cleaner handoff to Plymouth
-    };
+    # (Removed)
+    # initrd = {
+    #   verbose = false;
+    #   systemd.enable = true;      # initrd systemd for cleaner handoff to Plymouth
+    # };
 
     # Boot animation
     plymouth = {
