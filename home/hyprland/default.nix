@@ -1,55 +1,56 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   imports = [
-    ./input.nix
+    ./animation.nix
     ./binds.nix
+    ./decoration.nix
+    ./env.nix
+    ./input.nix
+    ./windowrule.nix
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
-    configType = "hyprlang";
+    configType = "lua";
 
-    # to use Nvidia GPU (see /hosts/hardware/nvidia.nix)
-    settings = {
-      env = [
-        "AQ_DRM_DEVICES,/dev/dri/nvidia-dgpu:/dev/dri/intel-igpu"
-      ];
-    };
+    # Use the same Hyprland and XDPH binaries as the NixOS module.
+    package = null;
+    portalPackage = null;
 
-    settings = {
-      monitor = [
-        "eDP-1, preferred, auto, 1"
-        "HDMI-A-1, preferred, auto-right, 1"
-      ];
-      
-      general = {
-        gaps_out = 8;
-        resize_on_border = true;
+    # Home Manager writes this Lua to ~/.config/hypr/hyprland.lua.
+    extraConfig = ''
+      -- Laptop on the left, external monitor on the right.
+      hl.monitor({ output = "eDP-1", mode = "preferred", position = "auto", scale = 1 })
+      hl.monitor({ output = "HDMI-A-1", mode = "preferred", position = "auto-right", scale = 1 })
 
-        layout = "dwindle";
-      };
+      hl.config({
+        general = {
+          gaps_out = 8,
+          resize_on_border = true,
+          layout = "dwindle",
+        },
+        dwindle = {
+          preserve_split = true,
+        },
+        misc = {
+          force_default_wallpaper = 0,
+          disable_hyprland_logo = true,
+        },
+        ecosystem = {
+          no_donation_nag = true,
+          no_update_news = false,
+        },
+      })
 
-      dwindle = {
-        preserve_split = true;
-      };
+      -- Prefer the NVIDIA device
+      hl.env("AQ_DRM_DEVICES", "/dev/dri/nvidia-dgpu:/dev/dri/intel-igpu")
 
-      misc = {
-        force_default_wallpaper = 0;
-	      disable_hyprland_logo = true;
-      };
-
-      ecosystem = {
-        no_donation_nag = true;
-	      no_update_news = false;
-      };
-
-      # Auto-start
-      exec-once = [
-        "noctalia"
-        # "sleep 2 & discord"
-        # "sleep 2 & vesktop"
-      ];
-    };
+      -- Startup
+      hl.on("hyprland.start", function()
+        hl.exec_cmd("noctalia")
+        hl.exec_cmd("vesktop")
+      end)
+    '';
   };
 }
