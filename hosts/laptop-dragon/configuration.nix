@@ -12,6 +12,7 @@
       ./boot.nix
       ./fonts.nix
       ./greeter.nix
+      # ./sddm.nix
 
       ../hardware/nvidia.nix
 
@@ -84,9 +85,10 @@
   users.users.masiasaig = {
     isNormalUser = true;
     description = "Masia Saig";
-    extraGroups = [ "networkmanager" "wheel" "docker" "kvm" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "kvm" "video" "render" ];
     packages = with pkgs; [];
   };
+  users.groups.greeter = {};
 
   nixpkgs.config.android_sdk.accept_license = true;
 
