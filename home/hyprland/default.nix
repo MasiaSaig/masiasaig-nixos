@@ -49,7 +49,7 @@
       -- Startup
       hl.on("hyprland.start", function()
         hl.exec_cmd("noctalia")
-        hl.exec_cmd("vesktop")
+        hl.exec_cmd("sleep 2 & vesktop")
       end)
     '';
   };
