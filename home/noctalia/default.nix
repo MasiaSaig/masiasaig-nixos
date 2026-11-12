@@ -69,6 +69,7 @@
         enabled = [
           "noctalia/notes"
           "noctalia/screen_recorder"
+          "piero-93/battery-power-management"
           "oldirtty/color_picker"
           "kenn/keybind-cheatsheet"
         ];
