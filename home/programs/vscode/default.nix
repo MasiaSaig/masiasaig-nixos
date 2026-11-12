@@ -3,16 +3,20 @@
 {
   programs.vscode = {
     enable = true;
+
+    # Workaround for nixpkgs #573021 VS code Copilot extension not 
+    # working due to missing executable permission on copilot-runtime
+    package = pkgs.vscode.overrideAttrs (old: {
+      postFixup = (old.postFixup or "") + ''
+        find "$out/lib/vscode/resources/app" \
+          -type f -name copilot-runtime -exec chmod +x {} +
+      '';
+    });
+
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
-        /*
-        vue.volar                           # Vue intelisense
-        eamodio.gitlens                     # Git-lens
-        github.copilot                      # Github Copilot
+        github.copilot
         github.copilot-chat
-        bmewburn.vscode-intelephense-client # PHP-intelisense
-        # Custom CSS and JS loader
-        */
       ];
 
       userSettings = {
