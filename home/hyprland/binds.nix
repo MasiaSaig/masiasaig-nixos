@@ -19,6 +19,7 @@
     hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("noctalia msg plugin oldirtty/color_picker:service all pick"))
     hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("noctalia msg panel-toggle noctalia/notes:panel"))
     hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("noctalia msg plugin noctalia/screen_recorder:service all toggle"))
+    hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("noctalia msg panel-toggle liamwh/emoji-picker:desktop"))
 
     -- Screenshots.
     hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("noctalia msg screenshot-region"))
