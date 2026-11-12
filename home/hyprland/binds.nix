@@ -16,11 +16,9 @@
 
     -- Noctalia.
     hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(ipc .. " panel-toggle launcher"))
-    -- hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(ipc .. " settings-toggle"))
     hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("noctalia msg plugin oldirtty/color_picker:service all pick"))
-    -- hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd(ipc .. " plugin:screen-toolkit recordMp4"))
-    -- hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd(ipc .. " plugin:screen-toolkit measure"))
     hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("noctalia msg panel-toggle noctalia/notes:panel"))
+    hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("noctalia msg plugin noctalia/screen_recorder:service all toggle"))
 
     -- Screenshots.
     hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("noctalia msg screenshot-region"))
