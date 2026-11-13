@@ -5,7 +5,7 @@
     inputs.noctalia.homeModules.default
   ];
 
-  home.packages = [ pkgs.gpu-screen-recorder ];
+  home.packages = [ pkgs.gpu-screen-recorder pkgs.slurp ];
 
   programs.noctalia = {
     enable = true;
@@ -89,6 +89,8 @@
           }
         ];
       };
+
+      plugin_settings."noctalia/screen_recorder".video_source = "region";
     };
   }; 
 }
