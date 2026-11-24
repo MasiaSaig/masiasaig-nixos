@@ -112,6 +112,11 @@
 
   security.polkit.enable = true;
 
+  programs.ssh.startAgent = true;
+  programs.ssh.extraConfig = ''
+    AddKeysToAgent yes
+  '';
+
   # automatic garbage collection and limit system configurations
   nix.gc = {
     automatic = true;
